@@ -5,9 +5,9 @@ import ImageTwo from "../../assets/images/photos/AdobeStock_270911862.jpeg";
 import ImageThree from "../../assets/images/photos/AdobeStock_347123057.jpeg";
 import "./Carousel.css";
 
-const CarouselComponent = () => {
+const CarouselComponent = ({ isNavbarHovered }) => {
   return (
-    <section className="hero-section">
+    <section className={`hero-section ${isNavbarHovered ? 'navbar-hovered' : ''}`}>
       <Carousel controls={true} indicators={true}>
         <Carousel.Item>
           <img
@@ -33,7 +33,7 @@ const CarouselComponent = () => {
       </Carousel>
       <div className="hero-text">
         <div className="hero-title-block">
-          <h1>CULTURE</h1>
+          <h1>Culture</h1>
         </div>
         <div className="hero-paragraph-block">
           <p>

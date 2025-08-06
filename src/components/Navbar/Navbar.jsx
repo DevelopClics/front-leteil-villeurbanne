@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import "./Navbar.css";
 
-const Navigation = () => {
+const Navigation = ({ onDropdownHoverChange }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [expanded, setExpanded] = useState(false);
   const navbarRef = useRef(null);
@@ -10,13 +10,21 @@ const Navigation = () => {
   const handleDropdownToggle = (dropdownId) => {
     if (openDropdown === dropdownId) {
       setOpenDropdown(null);
+      onDropdownHoverChange(false);
     } else {
       setOpenDropdown(dropdownId);
+      onDropdownHoverChange(true);
     }
   };
 
   const handleDropdownClose = () => {
     setOpenDropdown(null);
+    onDropdownHoverChange(false);
+  };
+
+  const handleDropdownOpen = (dropdownId) => {
+    setOpenDropdown(dropdownId);
+    onDropdownHoverChange(true);
   };
 
   const handleItemClick = () => {
@@ -60,7 +68,7 @@ const Navigation = () => {
               title="Qui sommes-nous ?"
               id="nav-dropdown-qui-sommes-nous"
               show={openDropdown === "qui-sommes-nous"}
-              onMouseEnter={() => setOpenDropdown("qui-sommes-nous")}
+              onMouseEnter={() => handleDropdownOpen("qui-sommes-nous")}
               onMouseLeave={handleDropdownClose}
               onClick={() => handleDropdownToggle("qui-sommes-nous")}
               className={`nav-element ${
@@ -82,7 +90,7 @@ const Navigation = () => {
               title="Les projets"
               id="nav-dropdown-les-projets"
               show={openDropdown === "les-projets"}
-              onMouseEnter={() => setOpenDropdown("les-projets")}
+              onMouseEnter={() => handleDropdownOpen("les-projets")}
               onMouseLeave={handleDropdownClose}
               onClick={() => handleDropdownToggle("les-projets")}
               className={`nav-element ${
@@ -110,7 +118,7 @@ const Navigation = () => {
               title="Nous rejoindre"
               id="nav-dropdown-nous-rejoindre"
               show={openDropdown === "nous-rejoindre"}
-              onMouseEnter={() => setOpenDropdown("nous-rejoindre")}
+              onMouseEnter={() => handleDropdownOpen("nous-rejoindre")}
               onMouseLeave={handleDropdownClose}
               onClick={() => handleDropdownToggle("nous-rejoindre")}
               className={`nav-element ${

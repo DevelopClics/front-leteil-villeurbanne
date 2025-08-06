@@ -9,6 +9,7 @@ import "./App.css";
 
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [isNavbarHovered, setIsNavbarHovered] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -44,8 +45,8 @@ function App() {
         {/* {screenWidth}px - {getBreakpoint(screenWidth)} */}
       </div>
       <TopHeader />
-      <Navigation />
-      <CarouselComponent />
+      <Navigation onDropdownHoverChange={setIsNavbarHovered} />
+      <CarouselComponent isNavbarHovered={isNavbarHovered} />
 
       <section className="reason-section">
         <Container className="app-container-padding">
