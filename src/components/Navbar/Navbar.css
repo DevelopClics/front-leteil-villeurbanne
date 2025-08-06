@@ -1,0 +1,240 @@
+.navbar {
+  background-color: var(--background-color);
+  border-bottom: 1px solid #e0e0e0;
+  padding: 2.5rem var(--global-padding-x) !important;
+}
+
+.navbar.navbar-expand-lg.navbar-light,
+.navbar.navbar-expand-md.navbar-light {
+  /* background-color: #f39a8b !important; */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.ms-auto.navbar-toggler {
+  padding-top: 0 !important;
+  background-color: transparent !important;
+}
+
+.navbar-collapse {
+  justify-content: center !important;
+}
+
+/* Each nav element gets a left border */
+.nav-element {
+  position: relative;
+  border-left: 3px solid var(--primary-color);
+}
+
+/* The last element also gets a right border to close the box */
+.navbar-links .nav-element:last-child {
+  border-right: 3px solid var(--primary-color);
+}
+
+/* Change button style on hover */
+.nav-element.is-hovered .dropdown-toggle {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  transition-delay: 0s;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-menu {
+  background-color: var(--primary-color) !important;
+  border-bottom-left-radius: 30px !important;
+  border-bottom-right-radius: 30px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border: none !important;
+  position: absolute !important;
+  top: calc(100% - 16px) !important; /* Pull up by 16px to close the gap */
+  left: 0 !important;
+  margin-left: -3px !important;
+  margin-right: -3px !important;
+  text-align: left; /* Align text to the left */
+  display: block !important; /* Override bootstrap's display:none */
+  will-change: transform, width;
+  transform: translateZ(0);
+  padding-bottom: 2em !important;
+
+  /* Animation properties */
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  width: calc(100% + 6px) !important;
+}
+
+.dropdown-menu.show {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition-delay: 0.5s;
+}
+
+.nav-element:nth-child(2) .dropdown-menu,
+.nav-element:nth-child(3) .dropdown-menu {
+  width: calc(100% + 5px) !important;
+}
+
+.is-closing .dropdown-menu {
+  transition: transform 0.3s ease-in-out; /* Ensure this matches the closing animation */
+}
+
+.is-closing .dropdown-item {
+  visibility: hidden;
+}
+
+.dropdown-item {
+  position: relative;
+  color: white !important;
+  background-color: transparent !important;
+  text-align: left !important;
+  padding-left: 6.5rem !important;
+  padding-right: 6.5rem !important;
+  font-size: 1.6rem;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none !important;
+}
+
+.dropdown-item a {
+  color: white !important; /* Ensure text color remains white */
+}
+
+.dropdown-item:hover a {
+  background-color: #f39a8b !important;
+}
+
+.dropdown-item:hover {
+  background-color: #f39a8b !important;
+}
+
+/* xs */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 1rem !important;
+  }
+  .navbar.navbar-expand-md.navbar-light {
+    z-index: 100 !important;
+    margin-top: -2.5rem !important;
+    padding-top: 0 !important;
+    background-color: transparent !important;
+  }
+  .navbar-collapse .dropdown-toggle,
+  .navbar-collapse .dropdown-item {
+    font-size: 1.3em; /* Increased font size for collapsed menu items */
+    text-align: left;
+    font-weight: 600;
+    padding: 8px 0 8px 6rem; /* Added left padding */
+    text-decoration: none !important; /* Ensure no text decoration */
+  }
+
+  .navbar-collapse .dropdown-toggle:hover,
+  .navbar-collapse .dropdown-item:hover {
+    text-decoration: none !important; /* Remove text-decoration on hover */
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 2.5rem 8rem !important;
+  }
+  .nav-element .dropdown-toggle {
+    font-family: var(--heading-font);
+    font-weight: 600;
+
+    color: var(--text-color);
+
+    padding: 1rem 1rem !important; /* Add space and override bootstrap */
+    font-size: 1.6rem;
+    letter-spacing: 0rem;
+    line-height: 1;
+    text-decoration: none;
+    background: none;
+    border: none;
+    transition: background-color 0.3s ease-in-out 0.3s, color 0.3s ease-in-out 0.3s;
+  }
+  .dropdown-item {
+    padding-left: 1.3rem !important;
+    padding-right: 1.3rem !important;
+    font-size: 1.2rem;
+  }
+}
+
+/* lg */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 2.5rem 8rem !important;
+  }
+  .nav-element .dropdown-toggle {
+    font-family: var(--heading-font);
+    font-weight: 600;
+
+    color: var(--text-color);
+
+    padding: 1rem 1rem !important; /* Add space and override bootstrap */
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    text-decoration: none;
+    background: none;
+    border: none;
+    transition: background-color 0.3s ease-in-out 0.3s, color 0.3s ease-in-out 0.3s;
+  }
+  .dropdown-item {
+    padding-left: 1.3rem !important;
+    padding-right: 1.3rem !important;
+  }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 2.5rem 8rem !important;
+  }
+  .nav-element .dropdown-toggle {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--text-color);
+
+    padding: 1rem 2.8rem !important; /* Add space and override bootstrap */
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    text-decoration: none;
+    background: none;
+    border: none;
+    transition: background-color 0.3s ease-in-out 0.3s, color 0.3s ease-in-out 0.3s;
+  }
+  .dropdown-item {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+/* xxl */
+@media (min-width: 1400px) {
+  .navbar {
+    padding: 2.5rem 12rem !important;
+  }
+  .nav-element .dropdown-toggle {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--text-color);
+
+    padding: 1rem 4.7rem !important; /* Add space and override bootstrap */
+    font-size: 1.8rem !important;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    text-decoration: none;
+    background: none;
+    border: none;
+    transition: background-color 0.3s ease-in-out 0.3s, color 0.3s ease-in-out 0.3s;
+  }
+  .dropdown-item {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
+}
