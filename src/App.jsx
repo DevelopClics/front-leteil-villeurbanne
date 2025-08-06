@@ -41,7 +41,7 @@ function App() {
   return (
     <>
       <div className="top-blue-bar">
-        {screenWidth}px - {getBreakpoint(screenWidth)}
+        {/* {screenWidth}px - {getBreakpoint(screenWidth)} */}
       </div>
       <TopHeader />
       <Navigation />
@@ -85,7 +85,7 @@ function App() {
       <Footer />
 
       <div className="bottom-blue-bar">
-        {screenWidth}px - {getBreakpoint(screenWidth)}
+        {/* {screenWidth}px - {getBreakpoint(screenWidth)} */}
       </div>
     </>
   );

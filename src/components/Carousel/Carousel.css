@@ -39,7 +39,7 @@
 
 .hero-image {
   width: 100%;
-  height: 55vh; /* Carousel heigth */
+  height: 80vh; /* Carousel heigth */
   object-fit: cover;
 }
 

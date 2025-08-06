@@ -1,7 +1,8 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import heroImage from "../../assets/images/visuel-lol.jpg";
-import alaturkaImage from "../../assets/images/alaturka.png";
+import ImageOne from "../../assets/images/photos/AdobeStock_128079957.jpeg";
+import ImageTwo from "../../assets/images/photos/AdobeStock_270911862.jpeg";
+import ImageThree from "../../assets/images/photos/AdobeStock_347123057.jpeg";
 import "./Carousel.css";
 
 const CarouselComponent = () => {
@@ -10,15 +11,22 @@ const CarouselComponent = () => {
       <Carousel controls={true} indicators={true}>
         <Carousel.Item>
           <img
-            src={heroImage}
-            alt="Culture"
+            src={ImageOne}
+            alt="Concer"
             className="d-block w-100 hero-image"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            src={alaturkaImage}
-            alt="Alaturka"
+            src={ImageTwo}
+            alt="Danse"
+            className="d-block w-100 hero-image"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src={ImageThree}
+            alt="Animation"
             className="d-block w-100 hero-image"
           />
         </Carousel.Item>

@@ -14,7 +14,7 @@ body {
 /* Top Header */
 .top-blue-bar {
   background-color: var(--primary-color); /* Use primary color */
-  height: 4vh;
+  height: 2.5vh;
   width: 100%;
   color: white;
   display: flex;
@@ -46,7 +46,7 @@ body {
 
 .bottom-blue-bar {
   background-color: var(--primary-color); /* Use primary color */
-  height: 4vh;
+  height: 2.5vh;
   width: 100%;
   color: white;
   display: flex;
