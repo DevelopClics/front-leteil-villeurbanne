@@ -3,9 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import facebookIconInverted from "../../assets/images/icons/facebook-icon-inverted.svg";
 import linkedinIconInverted from "../../assets/images/icons/linkedin-icon-inverted.svg";
 import logoTV from "../../assets/images/logos/logo_villeurbanne-le-teil_footer.svg";
-import leTeilLogo from "../../assets/images/logos/le-teil_logo_footer.png";
-import villeurbanneLogo from "../../assets/images/logos/villeurbanne_logo_footer.png";
-import supporterLogo from "../../assets/images/fondation-logo.png";
+import leTeilLogo from "../../assets/images/logos/Le_Teil_Logo_Vecto_BLANC.svg";
+import villeurbanneLogo from "../../assets/images/logos/Villeurbanne_Ville_Logo_Vecto_BLANC.svg";
+import fondationLogo from "../../assets/images/logos/Fondation_France_Logo_Seul_Vecto_BLANC.svg";
 import "./Footer.css";
 
 const Footer = () => {
@@ -165,7 +165,12 @@ const Footer = () => {
                       <p className="white-text">Ils nous soutiennent</p>
                     </Col>
                     <Col xs={1} sm={1} md={1} lg={3} xl={1} xxl={2}>
-                      <div className="white-square"></div>
+                      <img
+                        src={fondationLogo}
+                        alt="Logo"
+                        className="pe-5 me-5 mb-4 logo-ffr"
+                        style={{ marginTop: "-4vh" }}
+                      />
                     </Col>
                   </div>
                 </Row>

@@ -24,8 +24,7 @@ const TopHeader = () => {
           <Col xs={12} md={6} xl={3}>
             <Stack
               direction="horizontal"
-              gap={3}
-              className="justify-content-center justify-content-md-end"
+              className="justify-content-center justify-content-md-end social-icons-container"
             >
               <a href="#facebook" className="social-icon-circle facebook-icon">
                 <img src={facebookIcon} alt="Facebook" />

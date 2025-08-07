@@ -99,6 +99,7 @@
   font-weight: 600 !important;
   transition: background-color 0.3s ease-in-out;
   text-decoration: none !important;
+  font-family: var(--body-font);
 }
 
 .dropdown-item a {
@@ -159,7 +160,7 @@
   }
   .nav-element .dropdown-toggle {
     font-family: var(--heading-font);
-    font-weight: 600;
+    font-weight: 700;
 
     color: var(--text-color);
 
@@ -189,13 +190,13 @@
   }
   .nav-element .dropdown-toggle {
     font-family: var(--heading-font);
-    font-weight: 600;
+    font-weight: 700;
 
     color: var(--text-color);
 
     padding: 1rem 1rem !important; /* Add space and override bootstrap */
     font-size: 1.8rem;
-    letter-spacing: 0.2rem;
+    /* letter-spacing: 0.2rem; */
     line-height: 1;
     text-decoration: none;
     background: none;
@@ -218,7 +219,7 @@
   }
   .nav-element .dropdown-toggle {
     font-family: var(--heading-font);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-color);
 
     padding: 1rem 2.8rem !important; /* Add space and override bootstrap */
@@ -246,12 +247,12 @@
   }
   .nav-element .dropdown-toggle {
     font-family: var(--heading-font);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-color);
 
     padding: 1rem 4.7rem !important; /* Add space and override bootstrap */
-    font-size: 1.8rem !important;
-    letter-spacing: 0.2rem;
+    font-size: 1.55rem !important;
+    /* letter-spacing: 0.1rem; */
     line-height: 1;
     text-decoration: none;
     background: none;
@@ -262,7 +263,7 @@
   .dropdown-item {
     padding-left: 5rem !important;
     padding-right: 5rem !important;
-    font-size: 1.8rem;
-    font-weight: 400 !important;
+    font-size: 1.6rem;
+    font-weight: 300 !important;
   }
 }

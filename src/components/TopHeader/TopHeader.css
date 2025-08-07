@@ -13,13 +13,26 @@
 
 .social-icon-circle img {
   width: 5vw;
-  height: 5vh;
+  max-height: 5vh;
+}
+
+.social-icons-container > *:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.social-icon-circle.facebook-icon {
+  margin-right: 0.5rem;
+}
+
+.social-icon-circle.linkedin-icon {
+  margin-right: 0.5rem;
 }
 
 .social-icon-separator {
   width: 0.1vw;
   height: 5vh;
   background-color: #000000;
+  margin-right: 0.5rem;
 }
 
 /* xs */

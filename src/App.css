@@ -38,6 +38,10 @@ body {
   margin-bottom: 30px;
 }
 
+.reason-section p {
+  font-family: var(--body-font);
+}
+
 .bottom-blue-bar {
   background-color: var(--primary-color); /* Use primary color */
   height: 4vh;

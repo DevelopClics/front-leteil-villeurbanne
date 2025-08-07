@@ -10,7 +10,7 @@
 .carousel-control-prev-icon {
   width: 50em !important; /* Huge icon width */
   height: 50em !important; /* Huge icon height */
-  background-size: 100%, 100%;
+  background-size: 50%, 50%;
 }
 
 /* Carousel Indicators */
@@ -100,7 +100,7 @@
 /* md */
 @media (min-width: 768px) {
   .hero-text {
-    top: 16vh;
+    top: 17vh;
     left: 14.5vw;
   }
   .hero-paragraph-block p {

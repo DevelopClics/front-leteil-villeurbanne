@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@200;300;400;700&family=Holtwood+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Lato:wght@400;700&family=Lexend+Exa:wght@100..900&family=Montserrat:wght@200;300;400;700&display=swap");
 
 :root {
   --primary-color: #005468; /* Teal */
   --secondary-color: #f5c5be; /* Salmon */
   --text-color: #333333;
   --background-color: #ffffff;
-  --heading-font: "Montserrat", sans-serif;
-  --body-font: "Lato", sans-serif;
+  --heading-font: "Lexend Exa", sans-serif;
+  --body-font: "Lexend Exa", sans-serif;
   --title-font: "Holtwood One SC", serif;
   --global-padding-x: 1rem; /* Default padding for small screens */
 }
