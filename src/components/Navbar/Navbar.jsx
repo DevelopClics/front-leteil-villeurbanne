@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+
+import { Link, useNavigate } from "react-router-dom";
+
 import "./Navbar.css";
 
 const Navigation = ({ onDropdownHoverChange }) => {
@@ -75,13 +78,16 @@ const Navigation = ({ onDropdownHoverChange }) => {
                 openDropdown === "qui-sommes-nous" ? "is-hovered" : ""
               }`}
             >
-              <NavDropdown.Item href="#action/1.1" onClick={handleItemClick}>
+              {/* <NavDropdown.Item href="#action/1.1" onClick={handleItemClick}>
+                La génèse
+              </NavDropdown.Item> */}
+              <NavDropdown.Item as={Link} to="/genesis" onClick={handleItemClick}>
                 La génèse
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/1.2" onClick={handleItemClick}>
+              <NavDropdown.Item as={Link} to="/team" onClick={handleItemClick}>
                 L'équipe
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/1.3" onClick={handleItemClick}>
+              <NavDropdown.Item as={Link} to="/places" onClick={handleItemClick}>
                 Les villes
               </NavDropdown.Item>
             </NavDropdown>
@@ -97,19 +103,23 @@ const Navigation = ({ onDropdownHoverChange }) => {
                 openDropdown === "les-projets" ? "is-hovered" : ""
               }`}
             >
-              <NavDropdown.Item href="#action/2.1" onClick={handleItemClick}>
+              <NavDropdown.Item
+                as={Link}
+                to="/all-projects"
+                onClick={handleItemClick}
+              >
                 Tous les projets
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/2.2" onClick={handleItemClick}>
+              <NavDropdown.Item as={Link} to="/culture" onClick={handleItemClick}>
                 Culture
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/2.3" onClick={handleItemClick}>
+              <NavDropdown.Item as={Link} to="/food" onClick={handleItemClick}>
                 Alimentation
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/2.4" onClick={handleItemClick}>
+              <NavDropdown.Item as={Link} to="/youth" onClick={handleItemClick}>
                 Jeunesse
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/2.5" onClick={handleItemClick}>
+              <NavDropdown.Item as={Link} to="/economy" onClick={handleItemClick}>
                 Économie
               </NavDropdown.Item>
             </NavDropdown>
@@ -125,13 +135,17 @@ const Navigation = ({ onDropdownHoverChange }) => {
                 openDropdown === "nous-rejoindre" ? "is-hovered" : ""
               }`}
             >
-              <NavDropdown.Item href="#action/3.1" onClick={handleItemClick}>
+              <NavDropdown.Item as={Link} to="/member" onClick={handleItemClick}>
                 Devenir membre
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" onClick={handleItemClick}>
+              <NavDropdown.Item as={Link} to="/donate" onClick={handleItemClick}>
                 Faire un don
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3" onClick={handleItemClick}>
+              <NavDropdown.Item
+                as={Link}
+                to="/volunteer"
+                onClick={handleItemClick}
+              >
                 Bénévolat
               </NavDropdown.Item>
             </NavDropdown>

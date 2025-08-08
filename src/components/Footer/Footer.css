@@ -146,6 +146,9 @@
     min-height: 8vh;
     max-height: 20vh;
   }
+  .logo-ffr {
+    max-height: 10vh;
+  }
   .vertical-separator-left {
     height: 120px;
   }
@@ -160,6 +163,9 @@
     min-height: 8vh;
     max-height: 30vh;
   }
+  .logo-ffr {
+    max-height: 10vh;
+  }
   .vertical-separator-left {
     height: 120px;
   }
@@ -172,6 +178,9 @@
 @media (min-width: 768px) {
   .logo-tv {
     max-height: 14vh;
+  }
+  .logo-ffr {
+    max-height: 9vh;
   }
   .footer-logo {
     max-height: 12vh;
@@ -189,6 +198,9 @@
   .logo-tv {
     max-height: 12.5vh;
   }
+  .logo-ffr {
+    max-height: 9vh;
+  }
   .footer-logo {
     max-height: 4.5vh;
   }
@@ -204,6 +216,9 @@
 @media (min-width: 1200px) {
   .logo-tv {
     max-height: 10vh;
+  }
+  .logo-ffr {
+    max-height: 9vh;
   }
   .footer-logo {
     max-height: 5vh;
@@ -225,7 +240,7 @@
     max-height: 9.6vh;
   }
   .logo-ffr {
-    max-height: 7.7vh;
+    max-height: 8vh;
   }
   .footer-logo {
     max-height: 5vh;

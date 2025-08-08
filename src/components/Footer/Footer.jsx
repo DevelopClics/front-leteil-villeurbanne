@@ -164,7 +164,7 @@ const Footer = () => {
                     <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
                       <p className="white-text">Ils nous soutiennent</p>
                     </Col>
-                    <Col xs={1} sm={1} md={1} lg={3} xl={1} xxl={2}>
+                    <Col xs={2} sm={2} md={4} lg={3} xl={1} xxl={3}>
                       <img
                         src={fondationLogo}
                         alt="Logo"

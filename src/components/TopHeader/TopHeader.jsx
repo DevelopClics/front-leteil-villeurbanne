@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image, Stack } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
+
 import logoTzc from "../../assets/images/logo-le-teil-villeurbanne.svg";
 import facebookIcon from "../../assets/images/icons/facebook-icon.svg";
 import linkedinIcon from "../../assets/images/icons/linkedin-icon.svg";
@@ -18,7 +20,9 @@ const TopHeader = () => {
             xl={4}
             className="text-center text-md-start text-xl-center mb-3 mb-md-0"
           >
-            <Image src={logoTzc} alt="Logo TZC" className="main-logo" fluid />
+            <Link to="/">
+              <Image src={logoTzc} alt="Logo TZC" className="main-logo" fluid />
+            </Link>
           </Col>
 
           <Col xs={12} md={6} xl={3}>
@@ -33,9 +37,9 @@ const TopHeader = () => {
                 <img src={linkedinIcon} alt="LinkedIn" />
               </a>
               <div className="social-icon-separator"></div>
-              <a href="#mail" className="social-icon-circle">
+              <Link className="social-icon-circle" to="/contact">
                 <img src={mailIcon} alt="Mail" />
-              </a>
+              </Link>
             </Stack>
           </Col>
         </Row>

@@ -1,11 +1,26 @@
 import React, { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+// import PrivateRoutes from "./utils/PrivateRoutes";
 import Navigation from "./components/Navbar/Navbar";
+import "./App.css";
 import Footer from "./components/Footer/Footer";
 import TopHeader from "./components/TopHeader/TopHeader";
 import CarouselComponent from "./components/Carousel/Carousel";
 import { Container, Row, Col } from "react-bootstrap";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
-import "./App.css";
+import Team from "./pages/about/Team";
+import Genesis from "./pages/about/Genesis";
+import Places from "./pages/about/Places";
+import AllProj from "./pages/projects/AllProj";
+import Culture from "./pages/projects/Culture";
+import Food from "./pages/projects/Food";
+import Youth from "./pages/projects/Youth";
+import Economy from "./pages/projects/Economy";
+import Member from "./pages/join-us/Member";
+import Donate from "./pages/join-us/Donate";
+import Volunteer from "./pages/join-us/Volunteer";
 
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -42,46 +57,37 @@ function App() {
   return (
     <>
       <div className="top-blue-bar">
-        {/* {screenWidth}px - {getBreakpoint(screenWidth)} */}
+        {screenWidth}px - {getBreakpoint(screenWidth)}
       </div>
       <TopHeader />
       <Navigation onDropdownHoverChange={setIsNavbarHovered} />
       <CarouselComponent isNavbarHovered={isNavbarHovered} />
 
-      <section className="reason-section">
-        <Container className="app-container-padding">
-          <Row>
-            <Col>
-              <h2>NOTRE RAISON D'ÊTRE</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-                in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor
-                sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                consequat. Duis autem vel eum iriure dolor in hendrerit in
-                vulputate velit esse molestie. Lorem ipsum dolor sit amet,
-                consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
-                autem vel eum iriure dolor in hendrerit in vulputate velit esse
-                molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-                in hendrerit in vulputate velit esse molestie.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Routes>
+        {/* <Route element={<PrivateRoutes />}>
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/products/create" element={<CreateProduct />} />
+          <Route path="/products/edit/:id" element={<EditProduct />} />
+        </Route> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* QUI SOMMES NOUS   */}
+        <Route path="/genesis" element={<Genesis />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/places" element={<Places />} />
+        {/* TOUS LES PROJETS   */}
+        <Route path="/all-projects" element={<AllProj />} />
+        <Route path="/culture" element={<Culture />} />
+        <Route path="/food" element={<Food />} />
+        <Route path="/youth" element={<Youth />} />
+        <Route path="/economy" element={<Economy />} />
+        {/* NOUS REJOINDRE  */}
+        <Route path="/member" element={<Member />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/volunteer" element={<Volunteer />} />
+
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
 
       <Footer />
 
