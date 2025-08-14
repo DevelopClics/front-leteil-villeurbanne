@@ -18,7 +18,7 @@ export default function FoodProject({
       <hr />
       <div>
         <img
-          src={photo}
+          src={`${import.meta.env.BASE_URL}${photo}`}
           alt={alt}
           className="mb-1 mb-xl-4 me-3 me-3 me-xl-5 me-xxl-5 col-sm-5 col-md-5 col-xl-4 col-xxl-5  img-fluid float-start"
           style={{ width: size + "%" }}

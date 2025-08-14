@@ -51,7 +51,7 @@ export default function AllProj({ isNavbarHovered }) {
                         {item.category}
                       </div>
                       <img
-                        src={item.src}
+                        src={`${import.meta.env.BASE_URL}${item.src}`}
                         alt={item.alt}
                         className="square-img"
                       />

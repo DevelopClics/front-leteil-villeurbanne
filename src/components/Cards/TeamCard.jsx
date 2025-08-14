@@ -17,7 +17,7 @@ function TeamCard({ items = [] }) {
               <Card.Img
                 className="square-img"
                 variant="top"
-                src={item.src}
+                src={`${import.meta.env.BASE_URL}${item.src}`}
                 alt={item.alt}
               />
             </div>

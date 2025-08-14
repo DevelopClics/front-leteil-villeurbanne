@@ -12,7 +12,7 @@ const CarouselComponent = ({ isNavbarHovered, title, text, slides }) => {
         {slides.map((slide, index) => (
           <Carousel.Item key={index}>
             <img
-              src={slide.src}
+              src={`${import.meta.env.BASE_URL}${slide.src}`}
               alt={slide.alt}
               className="d-block w-100 hero-image"
             />
