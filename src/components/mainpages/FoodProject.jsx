@@ -1,0 +1,38 @@
+import { Container } from "react-bootstrap";
+import "../../App.css";
+
+export default function FoodProject({
+  title,
+  subtitle,
+  article,
+  photo,
+  alt,
+  size,
+
+  contacts,
+  links,
+}) {
+  return (
+    <div className="mb-5 clearfix">
+      <h4>{title}</h4>
+      <hr />
+      <div>
+        <img
+          src={photo}
+          alt={alt}
+          className="mb-1 mb-xl-4 me-3 me-3 me-xl-5 me-xxl-5 col-sm-5 col-md-5 col-xl-4 col-xxl-5  img-fluid float-start"
+          style={{ width: size + "%" }}
+        />
+
+        <h5 className="text-uppercase">{subtitle}</h5>
+        <p className="lh-1 no-padding-left">{article}</p>
+        <p>
+          <strong>
+            <span>{contacts}</span>&nbsp;
+            <span>{links}</span>
+          </strong>
+        </p>
+      </div>
+    </div>
+  );
+}

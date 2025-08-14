@@ -1,175 +1,201 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../../App.css";
-import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
-import pct1 from "../../assets/images/photos/AdobeStock_128079957.jpeg";
+import CarouselComponent from "../../components/Carousel/Carousel";
 
-export default function AllProj() {
-  const SUB = "Tous les projets";
+import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
+
+import "./AllProj.css";
+import Datas from "../../components/datas/Datas.json";
+import TeamCard from "../../components/Cards/TeamCard";
+
+export default function AllProj({ isNavbarHovered }) {
   const XS = 12;
   const SM = 12;
   const MD = 6;
   const LG = 4;
   const XL = 3;
   const XXL = 3;
-
+  const IMGPATH = "/images/photos/carousel/projects/";
+  const SUB = "Tous les projets";
+  const SUBTEXT =
+    "Projetti lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper suscipit lobortis nisl ut aliquip.";
   return (
     <>
+      <CarouselComponent
+        isNavbarHovered={isNavbarHovered}
+        title={SUB}
+        text={SUBTEXT}
+        slides={Datas.carouselSlides.projects}
+      />
+
       <Breadcrumbs breadcrumbsnav="Les projets" breadcrumbssub={SUB} />
       <section className="reason-section">
         <Container className="app-container-padding">
           <Row>
             <Col>
               <h2>{SUB}</h2>
-              <Row>
-                <Col
-                  xs={XS}
-                  sm={SM}
-                  md={MD}
-                  lg={LG}
-                  xl={XL}
-                  xxl={XXL}
-                  // className="mb-5 mb-sm-5 mb-xl-5"
-                >
-                  1
-                  <img
-                    src={pct1}
-                    alt="Logo"
-                    className="img-fluid"
-                    // className="pe-5 me-5 mb-4 logo-tv"
-                  />
-                </Col>
+              <Row className="g-4">
+                {Datas.allProjects.map((item, index) => (
+                  <Col
+                    key={index}
+                    xs={XS}
+                    sm={SM}
+                    md={MD}
+                    lg={LG}
+                    xl={XL}
+                    xxl={XXL}
+                  >
+                    <div className="square-img-container">
+                      <div className="project-category-label">
+                        {item.category}
+                      </div>
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className="square-img"
+                      />
+                      <div className="project-info-box">
+                        <h4 className="project-info-title">{item.title}</h4>
+                        <p className="project-info-text">{item.text}</p>
+                      </div>
+                    </div>
+                  </Col>
+                ))}
 
-                <Col
-                  xs={XS}
-                  sm={SM}
-                  md={MD}
-                  lg={LG}
-                  xl={XL}
-                  xxl={XXL}
-                  // className="mb-5 mb-sm-5 mb-xl-5"
-                >
-                  2
-                  <img
-                    src={pct1}
-                    alt="Logo"
-                    className="img-fluid"
+                {/* <Col xs={XS} sm={SM} md={MD} lg={LG} xl={XL} xxl={XXL}>
+                  <div className="square-img-container">
+                    <div className="project-category-label">Alimentation</div>
+                    <img
+                      src="/images/photos/carousel/projects/AdobeStock_318346130.jpeg"
+                      alt="Logo"
+                      className="square-img"
+                    />
+                    <div className="project-info-box">
+                      <h4 className="project-info-title">LE TITRE DU PROJET</h4>
+                      <p className="project-info-text">
+                        Un tout petit descriptif vraiment pas long du tout
+                      </p>
+                    </div>
+                  </div>
+                </Col> */}
 
-                    // className="pe-5 me-5 mb-4 logo-tv"
-                  />
-                </Col>
+                {/* <Col xs={XS} sm={SM} md={MD} lg={LG} xl={XL} xxl={XXL}>
+                  <div className="square-img-container">
+                    <div className="project-category-label">Culture</div>
+                    <img
+                      src="/images/photos/carousel/projects/AdobeStock_318346130.jpeg"
+                      alt="Logo"
+                      className="square-img"
+                    />
+                    <div className="project-info-box">
+                      <h4 className="project-info-title">LE TITRE DU PROJET</h4>
+                      <p className="project-info-text">
+                        Un tout petit descriptif vraiment pas long du tout
+                      </p>
+                    </div>
+                  </div>
+                </Col> */}
 
-                <Col
-                  xs={XS}
-                  sm={SM}
-                  md={MD}
-                  lg={LG}
-                  xl={XL}
-                  xxl={XXL}
-                  // className="mb-5 mb-sm-5 mb-xl-5"
-                >
-                  3
-                  <img
-                    src={pct1}
-                    alt="Logo"
-                    className="img-fluid"
+                {/* <Col xs={XS} sm={SM} md={MD} lg={LG} xl={XL} xxl={XXL}>
+                  <div className="square-img-container">
+                    <div className="project-category-label">Economie</div>
+                    <img
+                      src="/images/photos/carousel/projects/AdobeStock_318346130.jpeg"
+                      alt="Logo"
+                      className="square-img"
+                    />
+                    <div className="project-info-box">
+                      <h4 className="project-info-title">LE TITRE DU PROJET</h4>
+                      <p className="project-info-text">
+                        Un tout petit descriptif vraiment pas long du tout
+                      </p>
+                    </div>
+                  </div>
+                </Col> */}
 
-                    // className="pe-5 me-5 mb-4 logo-tv"
-                  />
-                </Col>
-
-                <Col
-                  xs={XS}
-                  sm={SM}
-                  md={MD}
-                  lg={LG}
-                  xl={XL}
-                  xxl={XXL}
-                  className="mb-5 mb-sm-5 mb-xl-5"
-                >
+                {/* <Col xs={XS} sm={SM} md={MD} lg={LG} xl={XL} xxl={XXL}>
                   {" "}
-                  4
-                  <img
-                    src={pct1}
-                    alt="Logo"
-                    className="img-fluid"
-                    // className="pe-5 me-5 mb-4 logo-tv"
-                  />
-                </Col>
-                <Col
-                  xs={XS}
-                  sm={SM}
-                  md={MD}
-                  lg={LG}
-                  xl={XL}
-                  xxl={XXL}
-                  // className="mb-5 mb-sm-5 mb-xl-5"
-                  className=""
-                >
-                  5
-                  <img
-                    src={pct1}
-                    alt="Logo"
-                    className="img-fluid"
-                    // className="pe-5 me-5 mb-4 logo-tv"
-                  />
-                </Col>
-                <Col
-                  xs={XS}
-                  sm={SM}
-                  md={MD}
-                  lg={LG}
-                  xl={XL}
-                  xxl={XXL}
-                  // className="mb-5 mb-sm-5 mb-xl-5"
-                >
-                  6
-                  <img
-                    src={pct1}
-                    alt="Logo"
-                    className="img-fluid"
-
-                    // className="pe-5 me-5 mb-4 logo-tv"
-                  />
-                </Col>
-                <Col
-                  xs={XS}
-                  sm={SM}
-                  md={MD}
-                  lg={LG}
-                  xl={XL}
-                  xxl={XXL}
-                  // className="mb-5 mb-sm-5 mb-xl-5"
-                >
-                  7
-                  <img
-                    src={pct1}
-                    alt="Logo"
-                    className="img-fluid"
-
-                    // className="pe-5 me-5 mb-4 logo-tv"
-                  />
-                </Col>
-                <Col
-                  xs={XS}
-                  sm={SM}
-                  md={MD}
-                  lg={LG}
-                  xl={XL}
-                  xxl={XXL}
-                  // className="mb-5 mb-sm-5 mb-xl-5"
-                >
-                  8
-                  <img
-                    src={pct1}
-                    alt="Logo"
-                    className="img-fluid"
-
-                    // className="pe-5 me-5 mb-4 logo-tv"
-                  />
-                </Col>
+                  <div className="square-img-container">
+                    <div className="project-category-label">Jeunesse</div>
+                    <img
+                      src="/images/photos/carousel/projects/AdobeStock_318346130.jpeg"
+                      alt="Logo"
+                      className="square-img"
+                    />
+                    <div className="project-info-box">
+                      <h4 className="project-info-title">LE TITRE DU PROJET</h4>
+                      <p className="project-info-text">
+                        Un tout petit descriptif vraiment pas long du tout
+                      </p>
+                    </div>
+                  </div>
+                </Col> */}
+                {/* <Col xs={XS} sm={SM} md={MD} lg={LG} xl={XL} xxl={XXL}>
+                  <div className="square-img-container">
+                    <div className="project-category-label">Alimentation</div>
+                    <img
+                      src="/images/photos/carousel/projects/AdobeStock_318346130.jpeg"
+                      alt="Logo"
+                      className="square-img"
+                    />
+                    <div className="project-info-box">
+                      <h4 className="project-info-title">LE TITRE DU PROJET</h4>
+                      <p className="project-info-text">
+                        Un tout petit descriptif vraiment pas long du tout
+                      </p>
+                    </div>
+                  </div>
+                </Col> */}
+                {/* <Col xs={XS} sm={SM} md={MD} lg={LG} xl={XL} xxl={XXL}>
+                  <div className="square-img-container">
+                    <div className="project-category-label">Alimentation</div>
+                    <img
+                      src="/images/photos/carousel/projects/AdobeStock_318346130.jpeg"
+                      alt="Logo"
+                      className="square-img"
+                    />
+                    <div className="project-info-box">
+                      <h4 className="project-info-title">LE TITRE DU PROJET</h4>
+                      <p className="project-info-text">
+                        Un tout petit descriptif vraiment pas long du tout
+                      </p>
+                    </div>
+                  </div>
+                </Col> */}
+                {/* <Col xs={XS} sm={SM} md={MD} lg={LG} xl={XL} xxl={XXL}>
+                  <div className="square-img-container">
+                    <div className="project-category-label">Alimentation</div>
+                    <img
+                      src="/images/photos/carousel/projects/AdobeStock_318346130.jpeg"
+                      alt="Logo"
+                      className="square-img"
+                    />
+                    <div className="project-info-box">
+                      <h4 className="project-info-title">LE TITRE DU PROJET</h4>
+                      <p className="project-info-text">
+                        Un tout petit descriptif vraiment pas long du tout
+                      </p>
+                    </div>
+                  </div>
+                </Col> */}
+                {/* <Col xs={XS} sm={SM} md={MD} lg={LG} xl={XL} xxl={XXL}>
+                  <div className="square-img-container">
+                    <div className="project-category-label">Culture</div>
+                    <img
+                      src="/images/photos/carousel/projects/AdobeStock_318346130.jpeg"
+                      alt="Logo"
+                      className="square-img"
+                    />
+                    <div className="project-info-box">
+                      <h4 className="project-info-title">LE TITRE DU PROJET</h4>
+                      <p className="project-info-text">
+                        Un tout petit descriptif vraiment pas long du tout
+                      </p>
+                    </div>
+                  </div>
+                </Col> */}
               </Row>
-              <p>xxxxx</p>
             </Col>
           </Row>
         </Container>

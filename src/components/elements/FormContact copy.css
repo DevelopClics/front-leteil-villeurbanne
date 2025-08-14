@@ -1,0 +1,105 @@
+.form-control {
+  border-radius: 0;
+}
+.form_control-light {
+  background: rgb(240, 240, 240);
+  background: rgb(255, 255, 255);
+  border-color: rgb(79, 79, 79);
+}
+.form_control-dark {
+  color: white;
+
+  background: rgb(79, 79, 79);
+  border-color: rgb(240, 240, 240);
+}
+.form_control-dark:focus {
+  color: white;
+  background: rgb(79, 79, 79);
+  border-color: rgb(240, 240, 240);
+}
+
+.form_control-dark:hover {
+  color: white;
+  background: rgb(49, 49, 49);
+  border-color: rgb(240, 240, 240);
+}
+
+.form_control-dark::placeholder {
+  color: white;
+}
+
+.error {
+  font-size: small !important;
+}
+.firstname {
+  border-top-left-radius: 2vw !important;
+  border-top-right-radius: 2vw !important;
+}
+.send {
+  border-bottom-left-radius: 2vw !important;
+  border-bottom-right-radius: 2vw !important;
+}
+/* MEDIAQUERIES */
+@media (min-width: 576px) {
+  .firstname {
+    border-top-left-radius: 2vw !important;
+    border-top-right-radius: 2vw !important;
+  }
+
+  .send {
+    border-bottom-left-radius: 2vw !important;
+    border-bottom-right-radius: 2vw !important;
+  }
+  /* .bord-bottom-left {
+    border-bottom-left-radius: 0.7vw !important;
+  }
+  .bord-bottom-right {
+    border-bottom-right-radius: 0.7vw !important;
+  } */
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* .bord-bottom-left {
+    border-bottom-left-radius: 0.7vw !important;
+  }
+  .bord-bottom-right {
+    border-bottom-right-radius: 0.7vw !important;
+  } */
+  .send {
+    border-bottom-left-radius: 1vw !important;
+    border-bottom-right-radius: 1vw !important;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .firstname {
+    border-top-left-radius: 1vw !important;
+    border-top-right-radius: 0 !important;
+  }
+  .objet {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 1vw !important;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+/* // XX-Large devices (larger desktops, 1400px and up) */
+
+@media (min-width: 1400px) {
+  .bord-bottom-left {
+    border-bottom-left-radius: 1vw !important;
+  }
+  .bord-bottom-right {
+    border-bottom-right-radius: 1vw !important;
+  }
+  #bord-top-left {
+    border-top-left-radius: 1vw !important;
+  }
+
+  #bord-top-right {
+    border-top-right-radius: 1vw !important;
+  }
+}

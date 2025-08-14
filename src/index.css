@@ -22,13 +22,22 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h4 {
   font-family: var(--title-font);
   font-weight: 400; /* Holtwood One SC is a display font, usually doesn't have multiple weights */
 }
 
+h5 {
+  font-family: var(--body-font);
+  font-weight: 800;
+}
+
 h2 {
   color: #f39a8b;
+}
+h4 {
+  color: var(--primary-color);
 }
 
 a {

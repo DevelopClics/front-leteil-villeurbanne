@@ -1,4 +1,6 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import { Container, Row, Col } from "react-bootstrap";
 import facebookIconInverted from "../../assets/images/icons/facebook-icon-inverted.svg";
 import linkedinIconInverted from "../../assets/images/icons/linkedin-icon-inverted.svg";
@@ -6,6 +8,7 @@ import logoTV from "../../assets/images/logos/logo_villeurbanne-le-teil_footer.s
 import leTeilLogo from "../../assets/images/logos/Le_Teil_Logo_Vecto_BLANC.svg";
 import villeurbanneLogo from "../../assets/images/logos/Villeurbanne_Ville_Logo_Vecto_BLANC.svg";
 import fondationLogo from "../../assets/images/logos/Fondation_France_Logo_Seul_Vecto_BLANC.svg";
+
 import "./Footer.css";
 
 const Footer = () => {
@@ -27,11 +30,14 @@ const Footer = () => {
                 xxl={4}
                 className="mb-5 mb-sm-5 mb-xl-5"
               >
-                <img
-                  src={logoTV}
-                  alt="Logo"
-                  className="pe-5 me-5 mb-4 logo-tv"
-                />
+                <Link to="/">
+                  <img
+                    src={logoTV}
+                    alt="Logo TV"
+                    className="pe-5 me-5 mb-4 logo-tv"
+                  />
+                </Link>
+
                 <div className="footer-logos-row">
                   <img
                     src={leTeilLogo}
@@ -74,13 +80,14 @@ const Footer = () => {
                 <h5>INFOS UTILES</h5>
                 <ul>
                   <li>
-                    <a href="#nous-ecrire">Nous écrire</a>
+                    <Link to="/contact">Nous écrire</Link>
                   </li>
+
                   <li>
                     <a href="#recevoir-newsletter">Recevoir notre newsletter</a>
                   </li>
                   <li>
-                    <a href="#equipe">L'équipe</a>
+                    <Link to="/team">L'équipe</Link>
                   </li>
                   <li>
                     <a href="#sites-amis">Les sites amis</a>

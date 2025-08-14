@@ -1,42 +1,24 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../App.css";
+import CarouselComponent from "../components/Carousel/Carousel";
 
-export default function Home() {
+import Datas from "../components/datas/Datas.json";
+import Reason from "../components/Reason";
+
+export default function Culture({ isNavbarHovered }) {
+  const SUB = "Bienvenue";
+  const SUBTEXT =
+    "Bienvenutta lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper suscipit lobortis nisl ut aliquip.";
   return (
-    <section className="reason-section" style={{ paddingTop: "50px" }}>
-      <Container className="app-container-padding">
-        <Row>
-          <Col>
-            <h2>NOTRE RAISON D'ÊTRE</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-              tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-              consequat. Duis autem vel eum iriure dolor in hendrerit in
-              vulputate velit esse molestie. Lorem ipsum dolor sit amet,
-              consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-              enim ad minim veniam, quis nostrud exerci tation ullamcorper
-              suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
-              autem vel eum iriure dolor in hendrerit in vulputate velit esse
-              molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-              nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-              in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor
-              sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-              Ut wisi enim ad minim veniam, quis nostrud exerci tation
-              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-              consequat. Duis autem vel eum iriure dolor in hendrerit in
-              vulputate velit esse molestie.
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    <>
+      <CarouselComponent
+        isNavbarHovered={isNavbarHovered}
+        title={SUB}
+        text={SUBTEXT}
+        slides={Datas.carouselSlides.welcome}
+      />
+      <Reason title="NOTRE RAISON D'ÊTRE" />
+    </>
   );
 }

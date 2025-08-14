@@ -5,7 +5,6 @@ import Navigation from "./components/Navbar/Navbar";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import TopHeader from "./components/TopHeader/TopHeader";
-import CarouselComponent from "./components/Carousel/Carousel";
 import { Container, Row, Col } from "react-bootstrap";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -61,7 +60,6 @@ function App() {
       </div>
       <TopHeader />
       <Navigation onDropdownHoverChange={setIsNavbarHovered} />
-      <CarouselComponent isNavbarHovered={isNavbarHovered} />
 
       <Routes>
         {/* <Route element={<PrivateRoutes />}>
@@ -69,22 +67,58 @@ function App() {
           <Route path="/products/create" element={<CreateProduct />} />
           <Route path="/products/edit/:id" element={<EditProduct />} />
         </Route> */}
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home isNavbarHovered={isNavbarHovered} />} />
+        <Route
+          path="/contact"
+          element={<Contact isNavbarHovered={isNavbarHovered} />}
+        />
         {/* QUI SOMMES NOUS   */}
-        <Route path="/genesis" element={<Genesis />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/places" element={<Places />} />
+        <Route
+          path="/genesis"
+          element={<Genesis isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/team"
+          element={<Team isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/places"
+          element={<Places isNavbarHovered={isNavbarHovered} />}
+        />
         {/* TOUS LES PROJETS   */}
-        <Route path="/all-projects" element={<AllProj />} />
-        <Route path="/culture" element={<Culture />} />
-        <Route path="/food" element={<Food />} />
-        <Route path="/youth" element={<Youth />} />
-        <Route path="/economy" element={<Economy />} />
+        <Route
+          path="/all-projects"
+          element={<AllProj isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/culture"
+          element={<Culture isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/food"
+          element={<Food isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/youth"
+          element={<Youth isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/economy"
+          element={<Economy isNavbarHovered={isNavbarHovered} />}
+        />
         {/* NOUS REJOINDRE  */}
-        <Route path="/member" element={<Member />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/volunteer" element={<Volunteer />} />
+        <Route
+          path="/member"
+          element={<Member isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/donate"
+          element={<Donate isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/volunteer"
+          element={<Volunteer isNavbarHovered={isNavbarHovered} />}
+        />
 
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
