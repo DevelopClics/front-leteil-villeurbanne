@@ -8,7 +8,7 @@ import linkedinIcon from "../../assets/images/icons/linkedin-icon.svg";
 import mailIcon from "../../assets/images/icons/mail-icon.svg";
 import "./TopHeader.css";
 
-const TopHeader = () => {
+const TopHeader = ({ socialIconsRef, socialIconsContainerRef }) => {
   return (
     <div className="top-header pt-3 p-md-5">
       <Container>
@@ -26,21 +26,24 @@ const TopHeader = () => {
           </Col>
 
           <Col xs={12} md={6} xl={3}>
-            <Stack
-              direction="horizontal"
-              className="justify-content-center justify-content-md-end social-icons-container"
-            >
-              <a href="#facebook" className="social-icon-circle facebook-icon">
-                <img src={facebookIcon} alt="Facebook" />
-              </a>
-              <a href="#linkedin" className="social-icon-circle linkedin-icon">
-                <img src={linkedinIcon} alt="LinkedIn" />
-              </a>
-              <div className="social-icon-separator"></div>
-              <Link className="social-icon-circle" to="/contact">
-                <img src={mailIcon} alt="Mail" />
-              </Link>
-            </Stack>
+            <div ref={socialIconsContainerRef}>
+              <Stack
+                ref={socialIconsRef}
+                direction="horizontal"
+                className="justify-content-center justify-content-md-end social-icons-container"
+              >
+                <a href="#facebook" className="social-icon-circle facebook-icon">
+                  <img src={facebookIcon} alt="Facebook" />
+                </a>
+                <a href="#linkedin" className="social-icon-circle linkedin-icon">
+                  <img src={linkedinIcon} alt="LinkedIn" />
+                </a>
+                <div className="social-icon-separator"></div>
+                <Link className="social-icon-circle" to="/contact">
+                  <img src={mailIcon} alt="Mail" />
+                </Link>
+              </Stack>
+            </div>
           </Col>
         </Row>
       </Container>

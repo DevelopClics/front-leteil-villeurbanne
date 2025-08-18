@@ -1,4 +1,5 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Pagination } from "react-bootstrap";
+import { useState } from "react";
 import "../../App.css";
 import CarouselComponent from "../../components/Carousel/Carousel";
 
@@ -11,6 +12,20 @@ export default function Food({ isNavbarHovered }) {
   const SUB = "Alimentation";
   const SUBTEXT =
     "Alimentione lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper suscipit lobortis nisl ut aliquip.";
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 3;
+
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = Datas.foodProjects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  const totalPages = Math.ceil(Datas.foodProjects.length / projectsPerPage);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <>
@@ -28,7 +43,7 @@ export default function Food({ isNavbarHovered }) {
             <Col>
               <h2>Les projets alimentation</h2>
 
-              {Datas.foodProjects.map((item) => (
+              {currentProjects.map((item) => (
                 <FoodProject
                   key={item.id}
                   title={item.title}
@@ -41,6 +56,19 @@ export default function Food({ isNavbarHovered }) {
                   links={item.links}
                 />
               ))}
+              <div className="d-flex justify-content-center mt-4">
+                <Pagination>
+                  {[...Array(totalPages)].map((_, index) => (
+                    <Pagination.Item
+                      key={index + 1}
+                      active={index + 1 === currentPage}
+                      onClick={() => paginate(index + 1)}
+                    >
+                      {index + 1}
+                    </Pagination.Item>
+                  ))}
+                </Pagination>
+              </div>
             </Col>{" "}
           </Row>
         </Container>

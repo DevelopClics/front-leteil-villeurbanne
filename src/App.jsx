@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 // import PrivateRoutes from "./utils/PrivateRoutes";
 import Navigation from "./components/Navbar/Navbar";
@@ -24,6 +24,9 @@ import Volunteer from "./pages/join-us/Volunteer";
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [isNavbarHovered, setIsNavbarHovered] = useState(false);
+  const socialIconsRef = useRef(null);
+  const socialIconsTargetRef = useRef(null);
+  const socialIconsContainerRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,6 +39,18 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (screenWidth < 768) {
+      if (socialIconsRef.current && socialIconsTargetRef.current) {
+        socialIconsTargetRef.current.appendChild(socialIconsRef.current);
+      }
+    } else {
+      if (socialIconsRef.current && socialIconsContainerRef.current) {
+        socialIconsContainerRef.current.appendChild(socialIconsRef.current);
+      }
+    }
+  }, [screenWidth]);
 
   const getBreakpoint = (width) => {
     if (width < 576) {
@@ -58,8 +73,14 @@ function App() {
       <div className="top-blue-bar">
         {screenWidth}px - {getBreakpoint(screenWidth)}
       </div>
-      <TopHeader />
-      <Navigation onDropdownHoverChange={setIsNavbarHovered} />
+      <TopHeader
+        socialIconsRef={socialIconsRef}
+        socialIconsContainerRef={socialIconsContainerRef}
+      />
+      <Navigation
+        onDropdownHoverChange={setIsNavbarHovered}
+        socialIconsTargetRef={socialIconsTargetRef}
+      />
 
       <Routes>
         {/* <Route element={<PrivateRoutes />}>

@@ -79,8 +79,8 @@
         "id": 6,
         "src": "images/photos/team/administration/09.jpg",
         "alt": "Concert",
-        "lastname": "DOE",
-        "surname": "Jane",
+        "lastname": "Doe",
+        "surname": "Marion",
         "occupation": "Directrice Générale",
         "contact": "jane.doe@adct-asso.org"
       },
@@ -475,6 +475,54 @@
       "size": "30",
 
       "title": "Projet N°4",
+      "subtitle": "date du projet et échéancier de réalisation",
+      "article": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvolutpat.",
+      "contacts": "mon-adresse@email.fr",
+      "links": "mon-site-web.com"
+    },
+    {
+      "id": 5,
+      "title": "Projet N°5",
+      "src": "images/photos/projects/food/AdobeStock_177891705.jpeg",
+      "alt": "alt",
+      "size": "30",
+
+      "subtitle": "date du projet et échéancier de réalisation",
+      "article": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.",
+      "contacts": "mon-adresse@email.fr",
+      "links": "mon-site-web.com"
+    },
+    {
+      "id": 6,
+      "title": "Projet N°6",
+      "src": "images/photos/projects/food/AdobeStock_482129143.jpeg",
+      "alt": "alt",
+      "size": "20",
+
+      "subtitle": "date du projet et échéancier de réalisation",
+      "article": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvolutpat.",
+      "contacts": "mon-adresse@email.fr",
+      "links": "mon-site-web.com"
+    },
+    {
+      "id": 7,
+      "title": "Projet N°7",
+      "src": "images/photos/projects/food/AdobeStock_328229951.jpeg",
+      "alt": "alt",
+      "size": "20",
+
+      "subtitle": "date du projet et échéancier de réalisation",
+      "article": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvolutpat.",
+      "contacts": "mon-adresse@email.fr",
+      "links": "mon-site-web.com"
+    },
+    {
+      "id": 8,
+      "src": "images/photos/projects/food/AdobeStock_204199437.jpeg",
+      "alt": "alt",
+      "size": "30",
+
+      "title": "Projet N°8",
       "subtitle": "date du projet et échéancier de réalisation",
       "article": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvolutpat.",
       "contacts": "mon-adresse@email.fr",

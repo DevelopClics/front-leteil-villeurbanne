@@ -175,7 +175,7 @@ const Footer = () => {
                       <img
                         src={fondationLogo}
                         alt="Logo"
-                        className="pe-5 me-5 mb-4 logo-ffr"
+                        className="pe-xl-1 me-xl-1 mb-4 logo-ffr"
                         style={{ marginTop: "-4vh" }}
                       />
                     </Col>

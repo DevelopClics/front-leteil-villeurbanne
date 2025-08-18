@@ -35,9 +35,12 @@
   margin-right: 0.5rem;
 }
 
-/* xs */
-@media (max-width: 575.98px) {
+.top-header {
+  position: relative;
+  z-index: 110;
 }
+
+
 
 /* sm */
 @media (min-width: 576px) {

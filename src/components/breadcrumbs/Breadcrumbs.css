@@ -10,3 +10,14 @@
   align-items: center;
   padding: 0 var(--global-padding-x);
 }
+.blue-bar {
+  font-size: 0.8rem !important;
+}
+
+@media (min-width: 576px) {
+  .blue-bar {
+    font-size: 1.2rem !important;
+  }
+}
+@media (min-width: 768px) {
+}

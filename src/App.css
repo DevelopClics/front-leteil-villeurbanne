@@ -63,3 +63,22 @@ body {
 .no-padding-left {
   padding-left: 0 !important;
 }
+
+/* Pagination styles */
+.pagination .page-item .page-link {
+  color: var(--primary-color);
+  background-color: #fff;
+  border-color: var(--primary-color);
+}
+
+.pagination .page-item.active .page-link {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.pagination .page-item .page-link:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
