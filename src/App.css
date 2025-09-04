@@ -66,19 +66,19 @@ body {
 
 /* Pagination styles */
 .pagination .page-item .page-link {
-  color: var(--primary-color);
-  background-color: #fff;
-  border-color: var(--primary-color);
+  color: var(--primary-color) !important;
+  background-color: #fff !important;
+  border-color: var(--primary-color) !important;
 }
 
 .pagination .page-item.active .page-link {
-  color: #fff;
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  color: #fff !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
 }
 
 .pagination .page-item .page-link:hover {
-  color: #fff;
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  color: #fff !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
 }

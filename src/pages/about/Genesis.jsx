@@ -3,7 +3,8 @@ import "../../App.css";
 import CarouselComponent from "../../components/Carousel/Carousel";
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import Datas from "../../components/datas/Datas.json";
-import Reason from "../../components/Reason";
+import GenesisComp from "../../components/GenesisComp";
+import PageLayout from "../../components/layouts/PageLayout";
 
 export default function Genesis({ isNavbarHovered }) {
   const SUB = "La génèse";
@@ -18,7 +19,7 @@ export default function Genesis({ isNavbarHovered }) {
         slides={Datas.carouselSlides.genesis}
       />
       <Breadcrumbs breadcrumbsnav="Qui sommes-nous ?" breadcrumbssub={SUB} />
-      <Reason title={SUB} />
+      <PageLayout title={SUB} DescriptionComponent={<GenesisComp />} />
     </>
   );
 }

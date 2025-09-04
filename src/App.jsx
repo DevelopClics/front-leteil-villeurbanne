@@ -20,6 +20,7 @@ import Economy from "./pages/projects/Economy";
 import Member from "./pages/join-us/Member";
 import Donate from "./pages/join-us/Donate";
 import Volunteer from "./pages/join-us/Volunteer";
+import Cooperation from "./pages/projects/Cooperation";
 
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -110,6 +111,10 @@ function App() {
         <Route
           path="/all-projects"
           element={<AllProj isNavbarHovered={isNavbarHovered} />}
+        />
+        <Route
+          path="/cooperation"
+          element={<Cooperation isNavbarHovered={isNavbarHovered} />}
         />
         <Route
           path="/culture"

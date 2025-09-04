@@ -1,27 +1,84 @@
-import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Pagination } from "react-bootstrap";
+import { useState } from "react";
 import "../../App.css";
 import CarouselComponent from "../../components/Carousel/Carousel";
 
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import Datas from "../../components/datas/Datas.json";
-import Reason from "../../components/Reason";
+import ProjectLayout from "../../components/layouts/ProjectLayout";
+
+// import FakeComp from "../../components/FakeComp";
+// import PageLayout from "../../components/mainpages/PageLayout";
 
 export default function Youth({ isNavbarHovered }) {
   const SUB = "Jeunesse";
   const SUBTEXT =
-    "Giovanni lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper suscipit lobortis nisl ut aliquip.";
+    "Pour lutter contre le décrochage de la jeunesse, présentons leurs d’autres horizons académiques, professionnels et de loisirs, créons des occasions de rencontres entre jeunes des villes et jeunes ruraux et travaillons avec eux à la création de projets.";
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 3;
+
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = Datas.youthProjects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  const totalPages = Math.ceil(Datas.youthProjects.length / projectsPerPage);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <>
       <CarouselComponent
         isNavbarHovered={isNavbarHovered}
         title={SUB}
         text={SUBTEXT}
-        slides={Datas.carouselSlides.youth}
+        slides={Datas.carouselSlides.food}
       />
-
       <Breadcrumbs breadcrumbsnav="Les projets" breadcrumbssub={SUB} />
-      <Reason title={SUB} />
+
+      <section className="reason-section" style={{ paddingTop: "50px" }}>
+        <Container className="app-container-padding">
+          <Row>
+            <Col>
+              <h2>Les projets jeunesse</h2>
+
+              {currentProjects.map((item) => (
+                <ProjectLayout
+                  key={item.id}
+                  title={item.title}
+                  photo={item.src}
+                  alt={item.alt}
+                  size={item.size}
+                  subtitle={item.subtitle}
+                  article={item.article}
+                  contacts={item.contacts}
+                  links01={item.links01}
+                  typelink01={item.typelink01}
+                  namelink01={item.namelink01}
+                  links02={item.links02}
+                  typelink02={item.typelink02}
+                  namelink02={item.namelink02}
+                />
+              ))}
+              <div className="d-flex justify-content-center mt-4">
+                <Pagination>
+                  {[...Array(totalPages)].map((_, index) => (
+                    <Pagination.Item
+                      key={index + 1}
+                      active={index + 1 === currentPage}
+                      onClick={() => paginate(index + 1)}
+                    >
+                      {index + 1}
+                    </Pagination.Item>
+                  ))}
+                </Pagination>
+              </div>
+            </Col>{" "}
+          </Row>
+        </Container>
+      </section>
     </>
   );
 }

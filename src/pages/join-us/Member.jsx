@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+// import { useEffect, useState } from "react";
+// import { Container, Row, Col } from "react-bootstrap";
 import "../../App.css";
 import CarouselComponent from "../../components/Carousel/Carousel";
 
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import Datas from "../../components/datas/Datas.json";
-import Reason from "../../components/Reason";
+// import Reason from "../../components/ReasonComp";
+import FakeComp from "../../components/FakeComp";
+import PageLayout from "../../components/layouts/PageLayout";
 
 export default function Member({ isNavbarHovered }) {
   const SUB = "Devenir membre";
@@ -22,7 +24,7 @@ export default function Member({ isNavbarHovered }) {
 
       <Breadcrumbs breadcrumbsnav="Nous rejoindre" breadcrumbssub={SUB} />
 
-      <Reason title={SUB} />
+      <PageLayout title={SUB} DescriptionComponent={<FakeComp />} />
     </>
   );
 }

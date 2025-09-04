@@ -20,7 +20,7 @@ const TopHeader = ({ socialIconsRef, socialIconsContainerRef }) => {
             xl={4}
             className="text-center text-md-start text-xl-center mb-3 mb-md-0"
           >
-            <Link to="/">
+            <Link to=".">
               <Image src={logoTzc} alt="Logo TZC" className="main-logo" fluid />
             </Link>
           </Col>

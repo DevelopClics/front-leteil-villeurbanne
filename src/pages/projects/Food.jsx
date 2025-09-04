@@ -5,14 +5,13 @@ import CarouselComponent from "../../components/Carousel/Carousel";
 
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import Datas from "../../components/datas/Datas.json";
-import Reason from "../../components/Reason";
-import FoodProject from "../../components/mainpages/FoodProject";
+// import Reason from "../../components/ReasonComp";
+import ProjectLayout from "../../components/layouts/ProjectLayout";
 
 export default function Food({ isNavbarHovered }) {
   const SUB = "Alimentation";
   const SUBTEXT =
-    "Alimentione lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper suscipit lobortis nisl ut aliquip.";
-
+    "Favorisons une production et une consommation alimentaire saine, responsable de l’environnement, qui fonctionne en circuit court, qui prend soin des producteurs et qui est accessible aux plus précaires.";
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 3;
 
@@ -44,7 +43,7 @@ export default function Food({ isNavbarHovered }) {
               <h2>Les projets alimentation</h2>
 
               {currentProjects.map((item) => (
-                <FoodProject
+                <ProjectLayout
                   key={item.id}
                   title={item.title}
                   photo={item.src}
@@ -53,7 +52,12 @@ export default function Food({ isNavbarHovered }) {
                   subtitle={item.subtitle}
                   article={item.article}
                   contacts={item.contacts}
-                  links={item.links}
+                  links01={item.links01}
+                  typelink01={item.typelink01}
+                  namelink01={item.namelink01}
+                  links02={item.links02}
+                  typelink02={item.typelink02}
+                  namelink02={item.namelink02}
                 />
               ))}
               <div className="d-flex justify-content-center mt-4">

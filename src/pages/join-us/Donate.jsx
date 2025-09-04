@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+// import { useEffect, useState } from "react";
+// import { Container, Row, Col } from "react-bootstrap";
 import "../../App.css";
 import CarouselComponent from "../../components/Carousel/Carousel";
 
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import Datas from "../../components/datas/Datas.json";
-import Reason from "../../components/Reason";
+import FakeComp from "../../components/FakeComp";
+import PageLayout from "../../components/layouts/PageLayout";
 
 export default function Donate({ isNavbarHovered }) {
   const SUB = "Faire un don";
@@ -22,7 +23,7 @@ export default function Donate({ isNavbarHovered }) {
 
       <Breadcrumbs breadcrumbsnav="Nous rejoindre" breadcrumbssub={SUB} />
 
-      <Reason title={SUB} />
+      <PageLayout title={SUB} DescriptionComponent={<FakeComp />} />
     </>
   );
 }

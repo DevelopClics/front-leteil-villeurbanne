@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import "../../App.css";
 
-export default function FoodProject({
+export default function ProjectLayout({
   title,
   subtitle,
   article,
@@ -10,7 +10,12 @@ export default function FoodProject({
   size,
 
   contacts,
-  links,
+  links01,
+  typelink01,
+  namelink01,
+  links02,
+  typelink02,
+  namelink02,
 }) {
   return (
     <div className="mb-5 clearfix">
@@ -29,7 +34,18 @@ export default function FoodProject({
         <p>
           <strong>
             <span>{contacts}</span>&nbsp;
-            <span>{links}</span>
+            <span>{typelink01} </span>
+            <a href={links01} target="_blank">
+              {namelink01}
+            </a>
+          </strong>
+        </p>
+        <p>
+          <strong>
+            <span>{typelink02} </span>
+            <a href={links02} target="_blank">
+              {namelink02}
+            </a>
           </strong>
         </p>
       </div>

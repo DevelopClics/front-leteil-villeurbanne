@@ -13,6 +13,9 @@
   height: 100%;
   object-fit: cover; /* This will make the image cover the square area, cropping if necessary */
 }
-.text {
+/* .text {
   margin-left: -0.5vw !important;
+} */
+.text {
+  margin-left: 0 !important;
 }

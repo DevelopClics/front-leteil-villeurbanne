@@ -9,7 +9,7 @@ export default TeamCard;
 
 function TeamCard({ items = [] }) {
   return (
-    <Row className="g-4">
+    <Row className="g-2 g-sm-2 g-lg-4">
       {items.map((item, index) => (
         <Col key={index} xs={12} sm={6} md={4} lg={3}>
           <Card>

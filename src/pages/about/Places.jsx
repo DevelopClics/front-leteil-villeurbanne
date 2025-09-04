@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+// import { useEffect, useState } from "react";
+// import { Container, Row, Col } from "react-bootstrap";
 import "../../App.css";
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import CarouselComponent from "../../components/Carousel/Carousel";
 import Datas from "../../components/datas/Datas.json";
-import Reason from "../../components/Reason";
+import FakeComp from "../../components/FakeComp";
+import PageLayout from "../../components/layouts/PageLayout";
 
 export default function Places({ isNavbarHovered }) {
   const SUB = "Les villes";
@@ -19,7 +20,7 @@ export default function Places({ isNavbarHovered }) {
         slides={Datas.carouselSlides.cities}
       />
       <Breadcrumbs breadcrumbsnav="Qui sommes-nous ?" breadcrumbssub={SUB} />
-      <Reason title={SUB} />
+      <PageLayout title={SUB} DescriptionComponent={<FakeComp />} />
     </>
   );
 }

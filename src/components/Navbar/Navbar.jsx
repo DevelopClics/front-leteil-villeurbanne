@@ -145,6 +145,13 @@ const Navigation = ({ onDropdownHoverChange, socialIconsTargetRef }) => {
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
+                to="/cooperation"
+                onClick={handleItemClick}
+              >
+                Coopération
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
                 to="/culture"
                 onClick={handleItemClick}
               >
